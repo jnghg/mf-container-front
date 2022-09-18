@@ -1,4 +1,5 @@
 import { useRouter } from "next/dist/client/router";
+import { Button, Space } from "antd";
 
 const BaseComponent = () => {
   const router = useRouter();
@@ -16,9 +17,11 @@ const BaseComponent = () => {
   return (
     <>
       <h1>Main Component</h1>
-      <button onClick={onClickMain}>Main Component</button>
-      <button onClick={onClickApp1}>App1 Component</button>
-      <button onClick={onClickApp2}>App2 Component</button>
+      <Space>
+        <Button onClick={onClickMain}>Main Component</Button>
+        <Button onClick={onClickApp1}>App1 Component</Button>
+        <Button onClick={onClickApp2}>App2 Component</Button>
+      </Space>
     </>
   );
 };
